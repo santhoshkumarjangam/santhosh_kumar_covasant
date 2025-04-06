@@ -1,3 +1,4 @@
+# IMPLEMENTATION 1
 import os
 
 base = "/Users/hp/oneDrive/Desktop/dir_demo"
@@ -18,8 +19,31 @@ for dir_path, dir_name, files in os.walk(base):
 print(f"file with the max size is: {max_sized_file}")
 print(f"size is:{max_size} bites")
 
+#---------------------------------------------------------------
+
+#IMPLEMENTATION 2
+import glob
+import os
+
+base = "/Users/hp/oneDrive/Desktop/dir_demo"
+max_size = -1
+max_sized_file = ""
+
+iter = glob.iglob("**/*.txt", root_dir=base, recursive=True)
+
+for file in iter:
+    file_path = os.path.join(base, file)
+    file_size = os.path.getsize(file_path)
+
+    if file_size > max_size:
+            max_sized_file = file
+            max_size = file_size
+            
+print(f"file with the max size is: {max_sized_file}")
+print(f"size is:{max_size} bites")
+
 '''
-output :
+OUTPUT :
 file with the max size is: 3.txt
 size is:170 bites
 '''
