@@ -17,5 +17,9 @@ for dir_path, dir_name, files in os.walk(base):
 
 print(f"file with the max size is: {max_sized_file}")
 print(f"size is:{max_size} bites")
-        
 
+'''
+output :
+file with the max size is: 3.txt
+size is:170 bites
+'''
