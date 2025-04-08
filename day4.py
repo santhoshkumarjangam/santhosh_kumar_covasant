@@ -20,7 +20,7 @@ class Poly:
             return Poly(*result)
             
         
-a = Poly(1,2,3,4,5,6,7,8)
+a = Poly(1,2,3)
 b = Poly(1,0,1,1,2,3)
 c = a + b
 print(c)
