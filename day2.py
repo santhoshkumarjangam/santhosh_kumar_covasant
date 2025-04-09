@@ -66,7 +66,7 @@ with open('dump.txt', 'w') as f:
         file_path = os.path.join(base, file)
         f.write(file_path + '\n')
 
-with open("dump.txt" "r") as f:
+with open("dump.txt", "r") as f:
     lines = f.readlines()
     print(lines)
 
