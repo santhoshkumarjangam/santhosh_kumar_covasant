@@ -1,3 +1,6 @@
+
+#Q3:
+
 # IMPLEMENTATION 1
 import os
 
@@ -46,4 +49,35 @@ print(f"size is:{max_size} bites")
 OUTPUT :
 file with the max size is: 3.txt
 size is:170 bites
+'''
+
+
+#Q4:
+
+import glob
+import os
+
+base = r"."
+
+iter = glob.iglob("**/*", root_dir = base, recursive = True)
+
+with open('dump.txt', 'w') as f:
+    for file in iter:
+        file_path = os.path.join(base, file)
+        f.write(file_path + '\n')
+
+with open("dump.txt" "r") as f:
+    lines = f.readlines()
+    print(lines)
+
+#OUTPUT:
+['./dump.txt\n, '.\mex.py\n', '.\mex_test.py\n', '.\script.py\n', '.\useME.py\n']
+
+#dump.txt:
+'''
+    ./dump.txt
+    .\mex.py
+    .\mex_test.py
+    .\script.py
+    .\useME.py
 '''
