@@ -71,7 +71,7 @@ with open("dump.txt", "r") as f:
     print(lines)
 
 #OUTPUT:
-['./dump.txt\n, '.\mex.py\n', '.\mex_test.py\n', '.\script.py\n', '.\useME.py\n']
+#['./dump.txt\n', '.\mex.py\n', '.\mex_test.py\n', '.\script.py\n', '.\useME.py\n']
 
 #dump.txt:
 '''
