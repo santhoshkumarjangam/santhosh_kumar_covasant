@@ -19,17 +19,6 @@ class Poly:
                 result[i] += other.lst[i]
             return Poly(*result)
             
-        
-a = Poly(1,2,3)
-b = Poly(1,0,1,1,2,3)
-c = a + b
-print(c)
-
-#output:
-# Poly([1, 0, 1, 2, 4, 6])
-
-#---------------------------------------------------------------------------
-
 #Q6
 class File:
     
@@ -78,14 +67,3 @@ class File:
                 result.append(file)
                 
         return result
-        
-#Main
-import datetime
-    
-f = File('.')
-
-print(f.getMaxSizeFile(3)) 
-# output : ['script.py', 'useME.py', 'dump.txt']
-
-print(f.getLatestFiles(datetime.date(2025,4,7))) 
-# output : ['dump.txt', 'useME.py']
