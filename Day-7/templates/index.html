@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notepad</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        pre { width: 80%; margin: auto; padding: 10px; border: 1px solid #ccc; background: #f9f9f9; }
+        button { padding: 10px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Notepad</h1>
+    <pre>{{ content }}</pre>
+    <form action="{{ url_for('updatefortoday') }}">
+        <button type="submit">Update</button>
+    </form>
+    <form action="{{ url_for('clear') }}">
+        <button type="submit">Clear</button>
+    </form>
+</body>
+</html>

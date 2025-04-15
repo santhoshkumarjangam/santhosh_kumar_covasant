@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Notepad</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        textarea { width: 80%; height: 200px; }
+        button { padding: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Update Notepad</h1>
+    <form action="{{url_for('updatefortoday')}}" method="post">
+        <textarea name="content">{{ content }}</textarea><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
