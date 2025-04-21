@@ -11,7 +11,7 @@ def index(city, format : str|None = "JSON"):
     if format.upper() == "XML":
         json_data = json.dumps(weather_data.get(city.capitalize(), {"details for city":"Not Found"}))
         data_dict = json.loads(json_data)
-        xml_data = xml_data = dicttoxml(data_dict)
+        xml_data = dicttoxml(data_dict, custom_root='weather', attr_type=False)
 
         return xml_data
     else:
