@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Response</title>
+    <link rel="stylesheet" href="../static/chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">AI Chatbot Response</div>
+        <div class="chat-body">
+            {% for line in chat_history %}
+            <p class="user-text">{{ line }}</p>
+            {% endfor %}
+        </div>
+        
+        <form action="{{ url_for('chat') }}" method="POST" class="chat-input-container">
+            <input type="text" name="user_message" class="chat-input" placeholder="Type a message..." required>
+            <button type="submit" class="send-btn">Send</button>
+        </form>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        const chatBody = document.querySelector('.chat-body');
+        if (chatBody) {
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    };
+</script>
+</html>
