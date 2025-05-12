@@ -30,8 +30,8 @@ def chat():
         chatbot_response = mistral_model.invoke(messages)
 
         
-        chat_history.append(f"👤 {user_message}")
-        chat_history.append(f"🤖 {chatbot_response.content}")
+        chat_history.append(f"{user_message}")
+        chat_history.append(f"{chatbot_response.content}")
 
     return render_template("chat.html", chat_history=chat_history)
 
